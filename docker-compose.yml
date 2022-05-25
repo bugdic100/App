@@ -1,0 +1,27 @@
+version: '2.5'
+services:
+  app:
+    build: ./app
+    Dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+  api:
+    build: ./api
+    Dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DATABASE=postgres
+    ports:
+      - '5432:5432'
+    volumes: 
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./db/postgres.sql:/docker-entrypoint-initdb.d/postgres.sql

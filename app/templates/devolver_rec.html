@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Devolver Recurso</h1>
+
+<form method="post">
+    <p>
+        <label for="id_usuario">ID usuário: </label>
+        <input type="text" name="id_usuario"
+               placeholder="nº identificador do usuário">
+        </input>
+    </p>
+    <p>
+        <label for="nome_recurso">Nome do recurso</label>
+        <input type="text" name="nome_recurso"
+               placeholder="nome do recurso">
+        </input>
+    </p>
+        <button type="submit">devolver</button>
+</form>
+
+{% endblock %}

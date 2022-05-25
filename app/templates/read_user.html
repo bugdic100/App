@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Listar Usuários</h1>
+
+<form action="listar_usuario" method="POST">
+    <p>
+        <label for="user_name">Nome do usuário: </label>
+        <input type="text" name="user_name"
+               placeholder="nome do usuário">
+        </input>
+    </p>
+        <button type="submit">listar</button>
+</form>
+<hr>
+{%for i in result%}
+    ID: {{i[0]}} - Nome: {{i[1]}} - Senha: {{i[2]}} - Tipo: {{i[3]}} <br>
+{% endfor %}
+
+{% endblock %}

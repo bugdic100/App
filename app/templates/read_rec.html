@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Listar Recursos</h1>
+
+<form action = "listar_recurso" method="POST">
+    <p>
+        <label for="resource_name">Nome do recurso: </label>
+        <input type="text" name="resource_name"
+               placeholder="nome do recurso">
+        </input>
+    </p>
+        <button type="submit">listar</button>
+</form>
+<hr>
+{%for i in result%}
+    Recurso: {{i[0]}} - qtde: {{i[1]}} <br>
+{% endfor %}
+
+{% endblock %}

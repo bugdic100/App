@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Excluir usuário</h1>
+
+<form action="excluir_usuario" method="POST">
+    <p>
+        <label for="user_name">Nome do usuário: </label>
+        <input type="text" name="user_name"
+               placeholder="Nome do usuário">
+        </input>
+    </p>
+        <button type="submit">excluir</button>
+</form>
+
+{% endblock %}

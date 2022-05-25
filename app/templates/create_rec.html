@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Criar Recurso</h1>
+
+<form action="criar_recurso" method="post">
+    <p>
+        <label for="nome_recurso">Nome do recurso:</label>
+        <input type="text" name="nome_recurso"
+               placeholder="nome do recurso">
+        </input>
+    </p>
+    <p>
+        <label for="qtde_recurso">Quantidade:</label>
+        <input type="number" name="qtde_recurso"
+               placeholder="quantidade do recurso">
+        </input>
+    </p>
+        <button type="submit">Salvar</button>
+</form>
+
+
+{% endblock %}

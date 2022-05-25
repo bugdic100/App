@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Listar aluguéis</h1>
+
+<form action="listar_aluguel" method="post">
+    <p>
+        <label for="id_usuario">ID usuário: </label>
+        <input type="text" name="id_usuario"
+               placeholder="nº identificador do usuário">
+        </input>
+    </p>
+        <button type="submit">devolver</button>
+</form>
+<hr>
+
+{%for i in result%}
+    ID usuário: {{i[0]}} - Nome recurso: {{i[1]}} - Qtde recurso: {{i[2]}} - Data empréstimo: {{i[3]}} -
+    Data entrega: {{i[4]}} - Status: {{i[5]}} <br>
+{% endfor %}
+
+{% endblock %}

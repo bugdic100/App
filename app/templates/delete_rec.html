@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Exluir Recurso</h1>
+
+<form action="excluir_recurso" method="POST">
+    <p>
+        <label for="nome_recurso">Nome do recurso</label>
+        <input type="text" name="nome_recurso"
+               placeholder="nome do recurso">
+        </input>
+    </p>
+        <button type="submit">excluir</button>
+</form>
+
+{% endblock %}

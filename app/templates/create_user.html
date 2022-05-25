@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Criar usuário</h1>
+
+<form method="post">
+    <p>
+        <label for="user_id">nº identificador: </label>
+        <input type="text" name="user_id"
+               placeholder="identificador do usuario">
+        </input>
+    </p>
+    <p>
+        <label for="user_name">Nome usuário: </label>
+        <input type="text" name="user_name"
+               placeholder="nome do usuario">
+        </input>
+    </p>
+    <p>
+        <label for="user_pwd">Senha usuário: </label>
+        <input type="text" name="user_pwd"
+               placeholder="senha">
+        </input>
+    </p>
+    <p>
+        <label>Tipo usuário:</label>
+        <select name="user_type">
+            <option value="admin">admin</option>
+            <option value="comum">comum</option>
+        </select>
+    </p>
+        <button type="submit">Salvar</button>
+</form>
+
+{% endblock %}

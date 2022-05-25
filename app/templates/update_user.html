@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% block content %}
+
+<h1>Atualizar Usuários</h1>
+
+<form action="atualizar_usuario" method="post">
+    <p>
+        <label for="id_user">nº identificador: </label>
+        <input type="text" name="id_user"
+               placeholder="id_user">
+        </input>
+    </p>
+    <p>
+        <label >Escolha um campo:</label>
+        <select name="campo">
+            <option value="Nome">Nome</option>
+            <option value="Senha" selected>Senha</option>
+            <option value="Tipo">Tipo</option>
+        </select>
+    </p>
+    <p>
+        <label for="new_value">Novo valor: </label>
+        <input type="text" name="new_value"
+               placeholder="Novo valor">
+        </input>
+    </p>
+        <button type="submit">atualizar</button>
+</form>
+
+{% endblock %}
