@@ -243,4 +243,4 @@ def listar_aluguel():
     return render_template('listar_aluguel.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0",port=4000)
