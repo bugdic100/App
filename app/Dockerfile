@@ -1,5 +1,7 @@
-FROM python:3.8
+FROM python
 ADD . /app
 WORKDIR /app
-RUN pip install -r requirements_app.txt
+COPY . /app
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 CMD python app.py

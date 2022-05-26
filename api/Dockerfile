@@ -1,5 +1,7 @@
-FROM python:3.8
+FROM python
 ADD . /api
 WORKDIR /api
-RUN pip install -r requirements_api.txt
+COPY . /app
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 CMD python api.py

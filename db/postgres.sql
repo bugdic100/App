@@ -2,7 +2,7 @@
 
 CREATE SCHEMA desafio_python
 
-SET search_path TO desafio_python
+--SET search_path TO desafio_python
 
 CREATE TABLE desafio_python.recurso(
 	nome_recurso text primary key,

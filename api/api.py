@@ -4,7 +4,7 @@ from datetime import date,datetime,timedelta
 from flask_restx import Api,Resource
 
 conn = connect(
-    host="localhost",#192.168.1.5
+    host="postgres",#192.168.1.5
     database="postgres",#exercicio
     port = "5432",
     user="postgres",

@@ -4,7 +4,7 @@ from psycopg2 import connect
 import jinja2
 
 conn = connect(
-    host="localhost",#192.168.1.5
+    host="postgres",#192.168.1.5
     database="postgres",#exercicio
     port = "5432",
     user="postgres",

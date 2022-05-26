@@ -1,4 +1,0 @@
-flask
-datetime
-psycopg2
-jinja2
