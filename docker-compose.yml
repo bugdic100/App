@@ -1,5 +1,16 @@
 version: '2.5'
 services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DATABASE=postgres
+    ports:
+      - '5432:5432'
+    volumes: 
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./db/postgres.sql:/docker-entrypoint-initdb.d/postgres.sql
   app:
     build: ./app
     Dockerfile: Dockerfile
@@ -14,14 +25,3 @@ services:
       - "5000:5000"
     depends_on:
       - postgres
-  postgres:
-    image: postgres:latest
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DATABASE=postgres
-    ports:
-      - '5432:5432'
-    volumes: 
-      - ./postgres-data:/var/lib/postgresql/data
-      - ./db/postgres.sql:/docker-entrypoint-initdb.d/postgres.sql
