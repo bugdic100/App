@@ -182,7 +182,7 @@ api.add_resource(Usuario, '/usuario/<string:id_usuario>&<string:nome_usuario>&<s
 api.add_resource(Emprestimo,'/emprestimo/<string:id>&<string:nome_recurso>&<int:qtde_recurso>&<string:data_inicio>&<string:data_fim>&<string:status>')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
 
 
 
