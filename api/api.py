@@ -6,6 +6,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 conn = connect(
     host="postgres",#postgres
+    host="postgres",#192.168.1.5
     database="postgres",#exercicio
     port = "5432",
     user="postgres",

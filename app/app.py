@@ -13,6 +13,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 ############## CONEXÃO DO BANCO DE DADOS ##############
 conn = connect(
     host="postgres",#postgres
+    host="postgres",#192.168.1.5
     database="postgres",#exercicio
     port = "5432",
     user="postgres",
@@ -566,3 +567,4 @@ def listar_aluguel():
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'gerenciador_de_recursos'
     app.run(host="0.0.0.0",port=4000)
+    app.run()

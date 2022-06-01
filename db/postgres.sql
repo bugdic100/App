@@ -6,15 +6,13 @@ CREATE SCHEMA desafio_python
 
 CREATE TABLE desafio_python.recurso(
 	nome_recurso text primary key,
-	qtde_recurso int
-);
+	qtde_recurso int);
 
 CREATE TABLE desafio_python.usuario(
 	id_usuario text primary key,
 	nome_usuario text,
 	senha text,
-	tipo text
-);
+	tipo text);
 
 CREATE TABLE desafio_python.emprestimo(
 	id_usuario text references desafio_python.usuario(id_usuario),
@@ -22,5 +20,4 @@ CREATE TABLE desafio_python.emprestimo(
 	qtde_recurso int,
 	data_inicio date,
 	data_fim date,
-	status text
-);
+	status text);
