@@ -24,7 +24,7 @@ cur = conn.cursor()
 ############## CONFIGURAÇÕES APP ##############
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@192.168.1.5:5432/postgres"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@postgres:5432/postgres"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["SESSION_PERMANENT"] = False
 login_manager = LoginManager()
@@ -114,19 +114,19 @@ def check_recurso(nome_recurso):
     return recurso
 
 ############## INSERE USUÁRIO ADMINISTRADOR ##############
-id_usuario = '01'
-nome_usuario = 'root'
-if not check_userid(id_usuario) and not check_username(nome_usuario):
-    senha = 'senha'
-    tipo = 'admin'
-    senha_hash = generate_password_hash(senha)
+# id_usuario = '01'
+# nome_usuario = 'root'
+# if not check_userid(id_usuario) and not check_username(nome_usuario):
+#     senha = 'senha'
+#     tipo = 'admin'
+#     senha_hash = generate_password_hash(senha)
 
-    cur.execute('INSERT INTO usuario (id_usuario,nome_usuario,senha,tipo)'
-    'VALUES (%s, %s, %s, %s)',
-    (id_usuario,nome_usuario,senha_hash,tipo))
-    conn.commit()  
+#     cur.execute('INSERT INTO usuario (id_usuario,nome_usuario,senha,tipo)'
+#     'VALUES (%s, %s, %s, %s)',
+#     (id_usuario,nome_usuario,senha_hash,tipo))
+#     conn.commit()  
 
-del id_usuario,nome_usuario
+# del id_usuario,nome_usuario
 
 ############## ROTAS DO SISTEMA ##############
 
