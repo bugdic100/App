@@ -5,31 +5,30 @@
 
 <form method="post">
     <p>
-        <label for="user_id">nº identificador: </label>
-        <input type="text" name="user_id"
+        <label for="id_usuario">nº identificador: </label>
+        <input type="text" name="id_usuario"
                placeholder="identificador do usuario">
         </input>
     </p>
     <p>
-        <label for="user_name">Nome usuário: </label>
-        <input type="text" name="user_name"
+        <label for="nome_usuario">Nome usuário: </label>
+        <input type="text" name="nome_usuario"
                placeholder="nome do usuario">
         </input>
     </p>
     <p>
-        <label for="user_pwd">Senha usuário: </label>
-        <input type="text" name="user_pwd"
+        <label for="senha">Senha usuário: </label>
+        <input type="text" name="senha"
                placeholder="senha">
         </input>
     </p>
     <p>
         <label>Tipo usuário:</label>
-        <select name="user_type">
+        <select name="tipo">
             <option value="admin">admin</option>
             <option value="comum">comum</option>
         </select>
     </p>
         <button type="submit">Salvar</button>
 </form>
-
 {% endblock %}

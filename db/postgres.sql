@@ -24,5 +24,3 @@ CREATE TABLE desafio_python.emprestimo(
 	data_fim date,
 	status text
 );
-
-INSERT INTO desafio_python.usuario VALUES('01','root','senha','admin');

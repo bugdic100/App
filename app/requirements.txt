@@ -2,3 +2,6 @@ Flask
 psycopg2
 jinja2
 datetime
+flask-login
+Flask-SQLAlchemy
+Werkzeug

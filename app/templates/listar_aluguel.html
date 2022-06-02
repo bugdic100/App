@@ -4,13 +4,46 @@
 <h1>Listar aluguéis</h1>
 
 <form action="listar_aluguel" method="post">
-    <p>
-        <label for="id_usuario">ID usuário: </label>
-        <input type="text" name="id_usuario"
+    {% if current_user.tipo == "admin" %}
+        <p>
+            <label for="id_usuario">ID usuário: </label>
+            <input type="text" name="id_usuario"
                placeholder="nº identificador do usuário">
+            </input>
+        </p>
+    {% endif %}
+    <p>
+        <label for="nome_recurso">Nome do recurso: </label>
+        <input type="text" name="nome_recurso"
+               placeholder="nome do recurso">
         </input>
     </p>
-        <button type="submit">devolver</button>
+    <p>
+        <label for="qtde_recurso">Qtde. do recurso: </label>
+        <input type="text" name="qtde_recurso"
+               placeholder="quantidade do recurso">
+        </input>
+    </p>
+    <p>
+        <label for="data_inicio">Data início: </label>
+        <input type="date" name="data_inicio"
+               placeholder="dd/mm/yyyy">
+        </input>
+    </p>
+    <p>
+        <label for="data_fim">Data fim: </label>
+        <input type="date" name="data_fim"
+               placeholder="dd/mm/yyyy">
+        </input>
+    </p>
+    <p>
+        <label>Status:</label>
+        <select name="status">
+            <option value="emprestado">emprestado</option>
+            <option value="devolvido">devolvido</option>
+        </select>
+    </p>
+        <button type="submit">Listar</button>
 </form>
 <hr>
 

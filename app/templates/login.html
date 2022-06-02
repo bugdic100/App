@@ -1,11 +1,19 @@
-{% extends "base.html"%}
-{% block content %}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Recursos</title>
+    <link rel="stylesheet" href="../static/style_base.css" type="text/css">
+</head>
 <h1>Tela de login</h1>
 <form action="login" method="POST">
-    <input type="text" name="username" placeholder="nome usuário">
-    <input type="text" name="password" placeholder="senha">
+    <input type="text" name="nome_usuario" placeholder="nome usuário">
+    <input type="text" name="senha" placeholder="senha">
     <input type="submit" value="Log In">
 </form>
-
-{% endblock %}
+<body>
+    
+</body>
+</html>
