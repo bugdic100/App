@@ -12,7 +12,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 ############## CONEXÃO DO BANCO DE DADOS ##############
 conn = connect(
-    host="192.168.1.5",#postgres
+    host="postgres",#postgres
     database="postgres",#exercicio
     port = "5432",
     user="postgres",

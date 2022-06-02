@@ -5,7 +5,7 @@ from flask_restx import Api,Resource
 from werkzeug.security import generate_password_hash,check_password_hash
 
 conn = connect(
-    host="192.168.1.5",#postgres
+    host="postgres",#postgres
     database="postgres",#exercicio
     port = "5432",
     user="postgres",
