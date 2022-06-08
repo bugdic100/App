@@ -9,11 +9,11 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 ############## CONEXÃO DO BANCO DE DADOS ##############
 conn = connect(
-    host="192.168.1.5",#postgres
+    host="postgres",#192.168.1.5
     database="postgres",
     port = "5432",
     user="postgres",
-    password="docker",#postgres
+    password="postgres",#docker
     options="-c search_path=dbo,desafio_python")
     
 cur = conn.cursor()
