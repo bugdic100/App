@@ -3,9 +3,9 @@ services:
   postgres:
     image: postgres:latest
     environment:
-      - POSTGRES_USER="postgres"
-      - POSTGRES_PASSWORD="postgres"
-      - POSTGRES_DATABASE="postgres"
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_DATABASE=postgres"
     ports:
       - 5432
     volumes: 
@@ -19,11 +19,11 @@ services:
       - 4000:4000
     depends_on:
       postgres:
-             condition: service_healthy
+         condition: service_healthy
   api:
     build: ./api
     ports:
       - 5000:5000
     depends_on:
       postgres:
-             condition: service_healthy
+         condition: service_healthy

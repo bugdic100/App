@@ -6,18 +6,14 @@ from psycopg2 import connect
 import jinja2
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash,check_password_hash
-# from flask_wtf import FlaskForm
-# from wtforms import StringField,PasswordField, SubmitField,ValidationError,validators
-# from wtforms.validators import DataRequired
 
 ############## CONEXÃO DO BANCO DE DADOS ##############
 conn = connect(
-    host="postgres",#postgres
     host="postgres",#192.168.1.5
-    database="postgres",#exercicio
+    database="postgres",
     port = "5432",
     user="postgres",
-    password="postgres",#docker
+    password="postgres",
     options="-c search_path=dbo,desafio_python")
     
 cur = conn.cursor()
@@ -115,19 +111,19 @@ def check_recurso(nome_recurso):
     return recurso
 
 ############## INSERE USUÁRIO ADMINISTRADOR ##############
-# id_usuario = '01'
-# nome_usuario = 'root'
-# if not check_userid(id_usuario) and not check_username(nome_usuario):
-#     senha = 'senha'
-#     tipo = 'admin'
-#     senha_hash = generate_password_hash(senha)
+id_usuario = '01'
+nome_usuario = 'root'
+if not check_userid(id_usuario) and not check_username(nome_usuario):
+    senha = 'senha'
+    tipo = 'admin'
+    senha_hash = generate_password_hash(senha)
 
-#     cur.execute('INSERT INTO usuario (id_usuario,nome_usuario,senha,tipo)'
-#     'VALUES (%s, %s, %s, %s)',
-#     (id_usuario,nome_usuario,senha_hash,tipo))
-#     conn.commit()  
+    cur.execute('INSERT INTO usuario (id_usuario,nome_usuario,senha,tipo)'
+    'VALUES (%s, %s, %s, %s)',
+    (id_usuario,nome_usuario,senha_hash,tipo))
+    conn.commit()  
 
-# del id_usuario,nome_usuario
+del id_usuario,nome_usuario
 
 ############## ROTAS DO SISTEMA ##############
 
