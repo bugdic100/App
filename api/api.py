@@ -372,4 +372,4 @@ api.add_resource(Usuario, '/usuario')
 api.add_resource(Emprestimo,'/emprestimo')
 
 if __name__ == '__main__':
-    app.run(port=2000)#host="0.0.0.0"
+    app.run(host="0.0.0.0")
