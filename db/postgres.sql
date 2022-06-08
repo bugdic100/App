@@ -17,3 +17,6 @@ CREATE TABLE desafio_python.emprestimo(
 	data_inicio date,
 	data_fim date,
 	status text);
+
+TRUNCATE TABLE desafio_python.usuario
+TRUNCATE TABLE desafio_python.emprestimo
