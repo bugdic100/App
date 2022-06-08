@@ -9,11 +9,11 @@ from werkzeug.security import generate_password_hash,check_password_hash
 
 ############## CONEXÃO DO BANCO DE DADOS ##############
 conn = connect(
-    host="postgres",#192.168.1.5
+    host="192.168.1.5",#postgres
     database="postgres",
     port = "5432",
     user="postgres",
-    password="postgres",
+    password="docker",#postgres
     options="-c search_path=dbo,desafio_python")
     
 cur = conn.cursor()
@@ -352,8 +352,6 @@ def alugar_recurso():
                     remain = result[0][1]-int(qtde_recurso)
                     hoje = date.today()
                     entrega = hoje + timedelta(days=5)
-                    hoje = hoje.strftime("%d/%m/%Y")
-                    entrega = entrega.strftime("%d/%m/%Y")
                     query_emprestimo = "INSERT INTO emprestimo VALUES ('"+str(id_usuario)+"','"+nome_recurso+"','"+str(qtde_recurso)+"','"+str(hoje)+"','"+str(entrega)+"','emprestado');"
                     cur.execute(query_emprestimo)
                     conn.commit()
